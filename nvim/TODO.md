@@ -1,0 +1,3 @@
+- Fix mapping of "s" in normal mode.
+- Change a colorscheme for better highlighting
+- Figure out lexcial.
