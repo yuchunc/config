@@ -1,2 +1,0 @@
-- Change a colorscheme for better highlighting
-- Figure out lexcial.
