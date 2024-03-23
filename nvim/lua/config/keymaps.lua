@@ -15,7 +15,7 @@ keymap.set("n", "<C-a>", "gg<C-i>", opts)
 keymap.set("n", "te", "tabeidt", opts)
 
 -- Split window
-keymap.set("n", "ss", ":split<Return>", opts)
+keymap.set("n", "sh", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- New tab

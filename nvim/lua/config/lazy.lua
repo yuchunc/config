@@ -10,19 +10,14 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- import any extras modules here
-    {
-      import = "lazyvim.plugins.extras.lang.elixir",
 
-      -- disables elixir-ls, it's too slow on save
-      opts = function(_, opts)
-        vim.list_extend(opts.ensure_installed, {})
-      end,
-    },
+    -- import any extras modules here
+    -- { import = "lazyvim.plugins.extras.lang.elixir" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
+    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- import/override with your plugins
     { import = "plugins" },
   },
