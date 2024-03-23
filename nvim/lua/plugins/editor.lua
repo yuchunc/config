@@ -59,29 +59,26 @@ return {
         build = "make",
       },
       "nvim-telescope/telescope-file-browser.nvim",
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        version = "^1.0.0",
+      },
     },
-    keywords = {
+    keys = {
       {
         "<leader>/",
         function()
           local telescope = require("telescope")
 
-          local function telescope_buffer_dir()
-            return vim.fn.expand("%:p:h")
-          end
-
-          telescope.extensions.file_browser.file_browser({
+          telescope.extensions.live_grep_args.live_grep_args({
+            auto_quoting = false,
+            -- grouped = true,
+            -- hidden = true,
             path = "%:p:h",
-            cwd = telescope_buffer_dir(),
             respect_gitignore = false,
-            hidden = true,
-            grouped = true,
-            previewer = false,
-            initial_mode = "normal",
-            layout_config = { height = 40 },
           })
         end,
-        desc = "Open File Browser with the path of the current buffer",
+        desc = "Grep (Root Args)",
       },
     },
     config = function(_, opts)
@@ -129,7 +126,7 @@ return {
                 end
               end,
               ["<C-d>"] = function(prompt_bufnr)
-                for i = 1, 10 do
+                for _ = 1, 10 do
                   actions.move_selection_next(prompt_bufnr)
                 end
               end,
@@ -141,6 +138,7 @@ return {
       telescope.setup(opts)
       require("telescope").load_extension("fzf")
       require("telescope").load_extension("file_browser")
+      require("telescope").load_extension("live_grep_args")
     end,
   },
 }
