@@ -1,4 +1,5 @@
 - Figure out lexcial.
+  - learn how to use lsp.
 - Change a colorscheme for better highlighting, and has white colorscheme for bright spaces.
 - add harpoon
 - add refactor
