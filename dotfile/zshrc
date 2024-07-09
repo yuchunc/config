@@ -1,0 +1,12 @@
+# asdf 
+. "/usr/local/opt/asdf/libexec/asdf.sh"
+
+# configs
+export EDITOR=nvim
+
+# aliases
+alias ll='ls -l'
+
+# Starship prompt
+eval "$(starship init zsh)"
+

@@ -17,8 +17,6 @@ return {
 
         -- FE
         "css-lsp",
-        "tailwindcss-language-server",
-        "typescript-language-server",
       })
     end,
   },
