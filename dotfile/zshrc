@@ -1,11 +1,16 @@
 # asdf 
 . "/usr/local/opt/asdf/libexec/asdf.sh"
 
-# configs
+### exports
 export EDITOR=nvim
+export ERL_AFLAGS="-kernel shell_history enabled"
 
-# aliases
+### aliases
 alias ll='ls -l'
+
+alias f="mix format"
+alias t="mix test"
+alias tw="mix test.watch"
 
 # Starship prompt
 eval "$(starship init zsh)"

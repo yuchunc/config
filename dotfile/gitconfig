@@ -1,7 +1,26 @@
-[alias]
-  lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 10 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
-  co = checkout
-  s = status -s
-  b = branch
-  a = add
+[user]
+	name = Mickey Chen
+	email = hey.mickabo@gmail.com
 
+[alias]
+  a = add
+  b = branch
+  c = commit
+  ca = commit --all
+  co = checkout
+  com = "!f() { \
+    branch=$(git symbolic-ref --short HEAD 2>/dev/null); \
+    if [ \"$branch\" = \"master\" ]; then \
+        echo 'Already on master'; \
+    elif [ \"$branch\" = \"main\" ]; then \
+        echo 'Already on main'; \
+    elif git show-ref --verify --quiet refs/heads/master; then \
+        git checkout master; \
+    elif git show-ref --verify --quiet refs/heads/main; then \
+        git checkout main; \
+    else \
+        echo 'Neither master nor main branch exists'; \
+    fi \
+  }; f"
+  lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 10 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
+  s = status -s
