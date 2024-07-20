@@ -1,12 +1,21 @@
 # asdf 
 . "/usr/local/opt/asdf/libexec/asdf.sh"
 
+# compinit
+autoload -Uz compinit
+compinit
+
 ### exports
 export EDITOR=nvim
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# Remote
+export AWS_PROFILE=sts
+
 ### aliases
 alias ll='ls -l'
+
+alias g="git"
 
 alias f="mix format"
 alias t="mix test"
