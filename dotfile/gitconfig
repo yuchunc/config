@@ -26,3 +26,5 @@
   m = merge
   m = merge master
   s = status -s
+[core]
+	excludesfile = /Users/mickey/.gitignore_global

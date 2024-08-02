@@ -1,0 +1,6 @@
+Host cobweb
+  HostName 139.162.18.91    
+  User cobweb
+  IdentityFile ~/.ssh/id_ed25519
+  PubkeyAcceptedAlgorithms +ssh-ed25519
+  HostkeyAlgorithms +ssh-ed25519
