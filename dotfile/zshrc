@@ -1,5 +1,10 @@
-# asdf 
-. "/usr/local/opt/asdf/libexec/asdf.sh"
+#  asdf 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+## postgres
+export LDFLAGS="-L$(brew --prefix icu4c)/lib -L$(brew --prefix openssl)/lib"
+export CPPFLAGS="-I$(brew --prefix icu4c)/include -I$(brew --prefix openssl)/include"
+export PKG_CONFIG_PATH="$(brew --prefix icu4c)/lib/pkgconfig:$(brew --prefix openssl)/lib/pkgconfig"
 
 # compinit
 autoload -Uz compinit
@@ -15,6 +20,8 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export AWS_PROFILE=sts
 
 ### aliases
+alias nv="nvim"
+
 alias ll='ls -l'
 
 alias g="git"
@@ -25,19 +32,4 @@ alias tw="mix test.watch"
 
 # Starship prompt
 eval "$(starship init zsh)"
-
-# tmp
-
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/libxml2/lib"
-export CPPFLAGS="-I/usr/local/opt/libxml2/include"
-export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
-
-export LDFLAGS="-L/usr/local/opt/libxslt/lib"
-export CPPFLAGS="-I/usr/local/opt/libxslt/include"
-export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig"
-
-export LDFLAGS="-L/usr/local/opt/openssl@1.0/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.0/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.0/lib/pkgconfig"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+PATH=/Users/mickey/.asdf/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/opt/libpq/bin
