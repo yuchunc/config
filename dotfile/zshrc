@@ -16,9 +16,6 @@ export PATH="$HOME/.asdf/shims:$PATH"
 export EDITOR=nvim
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# Remote
-export AWS_PROFILE=sts
-
 ### aliases
 alias nv="nvim"
 
@@ -33,3 +30,12 @@ alias tw="mix test.watch"
 # Starship prompt
 eval "$(starship init zsh)"
 PATH=/Users/mickey/.asdf/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/opt/libpq/bin
+
+# Remote
+export AWS_PROFILE=sts
+
+compdef remotectl
+compdef _remotectl remotectl
+source <(remotectl completion zsh)
+
+export PATH="$PATH:/Users/mickey/.asdf/installs/python/3.12.5/bin"

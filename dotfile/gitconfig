@@ -25,6 +25,16 @@
   d = diff
   lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 10 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
   m = merge
+  mm = "!f() { \
+    branch=$(git symbolic-ref --short HEAD 2>/dev/null); \
+    if git show-ref --verify --quiet refs/heads/master; then \
+        git merge master; \
+    elif git show-ref --verify --quiet refs/heads/main; then \
+        git merge main; \
+    else \
+        echo 'Neither master nor main branch exists'; \
+    fi \
+  }; f"
   s = status -s
 [core]
 	excludesfile = /Users/mickey/.gitignore_global
