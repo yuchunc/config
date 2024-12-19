@@ -5,7 +5,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         -- elixir
-        -- "lexical",
+        "lexical",
 
         -- lua
         "selene",
@@ -41,16 +41,6 @@ return {
           return require("lspconfig.util").root_pattern(".git")(...)
         end,
       },
-      -- lexical = {
-      --   root_dir = function(...)
-      --     return require("lspconfig.util").root_pattern(".git")(...)
-      --   end,
-      --   single_file_support = true,
-      --   filetypes = { "elixir", "eelixir", "heex" },
-      --   cmd = { "~/.local/share/nvim/mason/bin/lexical" },
-      --   settings = {},
-      -- },
     },
-    setup = {},
   },
 }
