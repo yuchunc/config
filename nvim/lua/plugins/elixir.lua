@@ -17,23 +17,23 @@ return {
     end,
   },
 
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      lexical = {
-        root_dir = function(...)
-          return require("lspconfig.util").root_pattern(".git")(...)
-        end,
-        single_file_support = true,
-        filetypes = { "elixir", "eelixir", "heex" },
-        cmd = { "~/.local/share/nvim/mason/bin/lexical" },
-        settings = {},
-      },
-      setup = {
-        lexical = function(_, opts)
-          require("lspconfig").lexical.setup(opts)
-        end,
-      },
-    },
-  },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   opts = {
+  --     lexical = {
+  --       root_dir = function(...)
+  --         return require("lspconfig.util").root_pattern(".git")(...)
+  --       end,
+  --       single_file_support = true,
+  --       filetypes = { "elixir", "eelixir", "heex" },
+  --       cmd = { "~/.local/share/nvim/mason/bin/lexical" },
+  --       settings = {},
+  --     },
+  --     setup = {
+  --       lexical = function(_, opts)
+  --         require("lspconfig").lexical.setup(opts)
+  --       end,
+  --     },
+  --   },
+  -- },
 }

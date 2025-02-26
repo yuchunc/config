@@ -11,3 +11,5 @@ vim.opt.wrap = true
 
 -- Set LazyRoot to cwd
 vim.g.root_spec = { "cwd" }
+
+vim.opt.swapfile = false
