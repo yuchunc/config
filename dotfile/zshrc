@@ -39,3 +39,12 @@ compdef _remotectl remotectl
 source <(remotectl completion zsh)
 
 export PATH="$PATH:/Users/mickey/.asdf/installs/python/3.12.5/bin"
+
+# Added by Windsurf
+export PATH="/Users/mickey/.codeium/windsurf/bin:$PATH"
+
+# Jinn
+export LINE_CLIENT_ID=2006985569
+export LINE_CLIENT_SECRET=d8ed61ba1d6866366e88a6d16e386414
+
+
