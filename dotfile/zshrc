@@ -44,7 +44,10 @@ export PATH="$PATH:/Users/mickey/.asdf/installs/python/3.12.5/bin"
 export PATH="/Users/mickey/.codeium/windsurf/bin:$PATH"
 
 # Jinn
-export LINE_CLIENT_ID=2006985569
-export LINE_CLIENT_SECRET=d8ed61ba1d6866366e88a6d16e386414
+export LINE_CLIENT_ID=2007208601
+export LINE_CLIENT_SECRET=0b5f91726b883b60131a040600cc5a50
 
-
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
