@@ -41,3 +41,5 @@
   s = status -s
 [core]
 	excludesfile = /Users/mickey/.gitignore_global
+[init]
+	defaultBranch = main
