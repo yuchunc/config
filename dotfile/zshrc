@@ -1,3 +1,7 @@
+# homebrew 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# export PATH="/opt/workbrew/bin:/opt/homebrew/bin:$PATH"
+
 #  asdf 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
@@ -28,8 +32,8 @@ alias t="mix test"
 alias tw="mix test.watch"
 
 # Starship prompt
-eval "$(starship init zsh)"
-PATH=/Users/mickey/.asdf/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/opt/libpq/bin
+# eval "$(starship init zsh)"
+# PATH=/Users/mickey/.asdf/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/opt/libpq/bin
 
 # Remote
 export AWS_PROFILE=sts
@@ -52,4 +56,5 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+# Livebook
 LIVEBOOK_SECRET_KEY_BASE=9apaSK16bPaF8XKzhyfYcWPaZCbGQ0K7qgNLGsINZ0Qv8kJNCHr94bSWx9+pA2JD
