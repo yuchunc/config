@@ -47,14 +47,8 @@ export PATH="$PATH:/Users/mickey/.asdf/installs/python/3.12.5/bin"
 # Added by Windsurf
 export PATH="/Users/mickey/.codeium/windsurf/bin:$PATH"
 
-# Jinn
-export LINE_CLIENT_ID=2007208601
-export LINE_CLIENT_SECRET=0b5f91726b883b60131a040600cc5a50
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
-
-# Livebook
-LIVEBOOK_SECRET_KEY_BASE=9apaSK16bPaF8XKzhyfYcWPaZCbGQ0K7qgNLGsINZ0Qv8kJNCHr94bSWx9+pA2JD
