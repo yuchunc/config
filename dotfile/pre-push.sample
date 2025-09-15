@@ -3,9 +3,9 @@
 # This pre-push hook ensures that all Elixir files are properly formatted
 # according to `mix format` before allowing a push to proceed.
 
-echo "Running mix format check before push..."
-
 mix deps.get
+
+echo "Running mix format check before push..."
 
 # Check if all files are properly formatted
 if ! mix format --check-formatted 2>/dev/null; then
@@ -23,4 +23,3 @@ echo "✅ All files are properly formatted!"
 echo ""
 
 exit 0
-
