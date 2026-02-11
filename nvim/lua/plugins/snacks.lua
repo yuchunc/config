@@ -3,6 +3,9 @@ return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
+    keys = {
+      { "<leader>/", false }, -- disable snacks grep, use telescope live_grep_args instead
+    },
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings

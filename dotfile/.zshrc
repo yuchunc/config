@@ -1,0 +1,60 @@
+# homebrew 
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/workbrew/bin:/opt/homebrew/bin:$PATH"
+
+#  asdf 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+## postgres
+# export LDFLAGS="-L$(brew --prefix icu4c)/lib -L$(brew --prefix openssl)/lib"
+# export CPPFLAGS="-I$(brew --prefix icu4c)/include -I$(brew --prefix openssl)/include"
+# export PKG_CONFIG_PATH="$(brew --prefix icu4c)/lib/pkgconfig:$(brew --prefix openssl)/lib/pkgconfig"
+
+# compinit
+autoload -Uz compinit
+compinit
+
+### exports
+export PATH="$HOME/.asdf/shims:$PATH"
+
+export EDITOR=nvim
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+### aliases
+alias nv="nvim"
+
+alias ll='ls -l'
+
+alias g="git"
+
+alias f="mix format"
+alias t="mix test"
+alias tw="mix test.watch"
+
+# Starship prompt
+eval "$(starship init zsh)"
+PATH=/Users/mickey/.asdf/shims:/opt/workbrew/bin:/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/opt/libpq/bin
+
+# Remote
+export AWS_PROFILE=sts
+
+compdef remotectl
+compdef _remotectl remotectl
+source <(remotectl completion zsh)
+
+export PATH="$PATH:/Users/mickey/.asdf/installs/python/3.12.5/bin"
+
+# Added by Windsurf
+export PATH="/Users/mickey/.codeium/windsurf/bin:$PATH"
+
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+export GRADLE_USER_HOME=~/Developer/.gradle
+export KONAN_DATA_DIR=~/Developer/.konan
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"

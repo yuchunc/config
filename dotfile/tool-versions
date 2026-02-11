@@ -1,9 +1,9 @@
-elixir 1.18.4-otp-28
+elixir 1.19.4-otp-28
 erlang 28.0.2
 nodejs 20.17.0
 kubectl 1.28.9
 python 3.12.5
 postgres 14.8
 zig 0.13.0
-remotectl 4.11.4
+remotectl 4.14.0
 bazel 8.2.1

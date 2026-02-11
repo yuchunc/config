@@ -1,7 +1,8 @@
 return {
-  -- Autocompletion plugin
+  -- Disable custom nvim-cmp config - LazyVim uses blink.cmp now
   {
     "hrsh7th/nvim-cmp",
+    enabled = false,
     dependencies = {
       "hrsh7th/cmp-nvim-lsp", -- LSP source for nvim-cmp
       "hrsh7th/cmp-buffer", -- Buffer completions
@@ -53,16 +54,6 @@ return {
   -- LSP configuration for Lexical
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.lexical.setup({
-        cmd = { "/path/to/lexical/bin/start_lexical.sh" }, -- Update this with the correct path to Lexical
-        on_attach = function(_, bufnr)
-          local bufopts = { noremap = true, silent = true, buffer = bufnr }
-          vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
-        end,
-      })
-    end,
+    enabled = false, -- This conflicts with LazyVim's LSP setup
   },
 }
