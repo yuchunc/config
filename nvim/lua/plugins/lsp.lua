@@ -5,7 +5,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         -- elixir
-        "lexical",
+        "expert", -- Official Elixir LSP
 
         -- lua
         "selene",
@@ -37,6 +37,7 @@ return {
             },
           },
         },
+        expert = {}, -- Official Elixir LSP
         cssls = {},
         tailwindcss = {
           root_dir = function(...)

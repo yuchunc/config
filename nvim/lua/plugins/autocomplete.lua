@@ -50,10 +50,4 @@ return {
       })
     end,
   },
-
-  -- LSP configuration for Lexical
-  {
-    "neovim/nvim-lspconfig",
-    enabled = false, -- This conflicts with LazyVim's LSP setup
-  },
 }
